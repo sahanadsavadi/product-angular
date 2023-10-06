@@ -1,0 +1,26 @@
+<div (click)="activeDrawer = !activeDrawer" class="">
+  <img src="/assets/headline.svg" alt="headline" />
+</div>
+<div
+  *ngIf="activeDrawer"
+  class="z-50 fixed top-0 left-0 bg-black-600/80 w-1/2 rounded-r-lg h-full before:fixed before:w-full before:h-full before:bg-black-600/50 before:top-0 before:left-0"
+>
+  <div class="relative flex items-center flex-col space-y-15px p-10px text-center">
+    <a
+      [routerLinkActive]="['nav-item-drawer-text']"
+      [routerLink]="['/']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="text-p-lg text-white"
+    >
+      خانه
+    </a>
+    <app-nav-items styleModeText="nav-item-drawer-text" styleModeContainer="nav-item-drawer" />
+    <button
+      (click)="activeDrawer = false"
+      type="button"
+      class="text-white absolute top-0 right-2"
+    >
+      <img src="/assets/close.svg" class="w-5 h-5" alt="close" />
+    </button>
+  </div>
+</div>

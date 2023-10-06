@@ -1,0 +1,11 @@
+<div class="md:grid md:grid-cols-12 gap-10px">
+  <img
+    src="/assets/form-{{formSelect}}.png"
+    alt="form {{formSelect}}"
+    class="rounded-lg col-span-9 md:flex sm-m:hidden"
+  />
+  <div class="col-span-3">
+    <app-login *ngIf="formSelect == 'login'" />
+    <app-register *ngIf="formSelect == 'register'"  />
+  </div>
+</div>

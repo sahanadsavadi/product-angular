@@ -1,0 +1,23 @@
+<div
+  class="flex flex-col border border-grey-600 rounded-lg gap-15px p-10px text-right"
+>
+  <p class="text-p-lg-bold">جمع کل سبد خرید</p>
+  <ul class="flex gap-15px flex-col">
+    <li class="flex lg:flex-row md:flex-col-reverse justify-between">
+      <p class="text-p-lg-bold">{{ totalPrice }} تومان</p>
+      <p class="lg:text-p-lg md:text-p-md">قیمت کالاها ({{ countProducts }})</p>
+    </li>
+    <li class="flex lg:flex-row md:flex-col-reverse justify-between">
+      <p class="text-p-lg-bold">{{ discount }} تومان</p>
+      <p class="lg:text-p-lg md:text-p-md">مجموع</p>
+    </li>
+  </ul>
+  <p dir="rtl" class="text-red-500 text-p-md">
+    <span class="text-p-md-bold">{{ discountUsed }}</span> تخفیف بزای شما اعمال
+    شد
+  </p>
+  <button type="button" class="btn-green group justify-center items-center gap-5px text-p-lg">
+    ثبت سفارش
+    <img src="/assets/basket.svg" class="w-[20px] h-[20px] group-hover:bg-green-500 rounded-full" />
+  </button>
+</div>

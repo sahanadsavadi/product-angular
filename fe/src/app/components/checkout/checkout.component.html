@@ -1,0 +1,8 @@
+<div class="md:grid md:grid-cols-12 gap-15px sm-m:flex sm-m:flex-col">
+  <app-product-checkout-info class="col-span-3"></app-product-checkout-info>
+  <ul class="col-span-9 gap-10px grid">
+    <li *ngFor="let item of cardProducts">
+      <app-card-product-checkout [productCard]="item"></app-card-product-checkout>
+    </li>
+  </ul>
+</div>

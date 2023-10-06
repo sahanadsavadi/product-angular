@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Vazirmatn RD";
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Round-Dots/fonts/webfonts/Vazirmatn-RD[wght].woff2")
+      format("woff2 supports variations"),
+    url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Round-Dots/fonts/webfonts/Vazirmatn-RD[wght].woff2")
+      format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+button {
+  font-family: "Vazirmatn RD";
+  font-weight: 400;
+}
+body {
+  background-color: #f6f8f9;
+  font-family: "Vazirmatn RD";
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #212121;
+}
+@layer base {
+  input {
+    @apply bg-transparent p-5px px-10px text-p-md rounded-lg border border-grey-600 focus:outline-none;
+  }
+}
+@layer components {
+  .cardInfoIcon-checkout {
+    @apply md:flex-row sm-m:flex-col;
+  }
+  .cardInfoIcon-base {
+    @apply flex-col;
+  }
+  .btn-green {
+    @apply py-5px px-10px flex border items-center rounded bg-green-500 text-white hover:bg-transparent hover:border hover:border-green-500 hover:text-green-500;
+  }
+  .nav-item-default {
+    @apply flex  space-x-15px;
+  }
+  .nav-item-drawer {
+    @apply nav-item-default flex-col-reverse text-white  space-x-0  gap-15px;
+  }
+  .nav-item-default-text {
+    @apply text-black-600 text-p-md
+  }
+  .nav-item-drawer-text {
+    @apply text-white text-p-lg;
+  }
+}

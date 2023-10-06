@@ -1,0 +1,30 @@
+<div
+  dir="rtl"
+  class="rounded-lg flex md:flex-row sm-m:flex-col p-15px text-start border border-grey-600 bg-white gap-15px"
+>
+  <div class="flex flex-col sm-m:items-center gap-5px">
+    <img
+    src={{productCard.image}}
+    alt={{productCard.title}}
+      class="md:w-90 md:h-auto sm-m:h-250 object-contain rounded-lg"
+    />
+    <div
+      class="flex md:justify-center sm-m:justify-around cursor-not-allowed opacity-50  items-center gap-15px border border-grey-600 rounded-xl md:w-full sm-m:w-fit p-5px"
+    >
+      <button class="text-p-lg">+</button>
+      <p class="text-p-lg-bold">0</p>
+      <button class="text-p-lg">-</button>
+    </div>
+  </div>
+  <div class="flex flex-col gap-10px">
+    <p class="text-p-lg-bold">{{productCard.title}}</p>
+    <p *ngIf="productCard.subtitle" class="text-p-md-bold text-black-400">{{productCard.subtitle}}</p>
+    <div class="space-y-15px flex flex-row">
+      <app-card-info-icon
+        [productCard]="productCard"
+        [cardInfoIconClassParent]="cardInfoIconClassParent"
+      ></app-card-info-icon>
+    </div>
+    <p class="text-red-500 lg:text-p-lg  sm-m:text-p-sm"><span class="lg:text-p-lg-bold sm-m:text-p-sm-bold">{{productCard.remainingProducts}}</span> عدد از <span class="lg:text-p-lg-bold sm-m:text-p-sm-bold">{{productCard.numberOfProducts}}</span> باقی مانده است</p>
+  </div>
+</div>

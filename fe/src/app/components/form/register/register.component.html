@@ -1,0 +1,76 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-15px">
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="name">نام</label>
+    <input
+      type="text"
+      name="name"
+      placeholder="سهند"
+      id="name"
+      formControlName="name"
+      
+    />
+  </div>
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="lastName">نام خانوادگی</label>
+    <input
+      type="text"
+      formControlName="lastName"
+      name="lastName"
+      placeholder="سوادی"
+      id="lastName"
+      
+    />
+  </div>
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="email">ایمیل</label>
+    <input
+      formControlName="email"
+      type="email"
+      name="email"
+      placeholder="example@gmail.com"
+      id="email"
+      
+    />
+  </div>
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="tellphone">شماره تلفن</label>
+    <input
+      formControlName="tellphone"
+      type="tel"
+      name="tellphone"
+      placeholder="09000000000"
+      id="tellphone"
+      
+    />
+  </div>
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="password">رمز عبور</label>
+    <input
+      formControlName="password"
+      type="password"
+      name="password"
+      placeholder="12345Abcd!@#"
+      id="password"
+      
+    />
+  </div>
+  <div class="flex flex-col text-right gap-5px">
+    <label class="text-p-md-bold" for="confirmPassword">تکرار رمز عبور</label>
+    <input
+      formControlName="confirmPassword"
+      type="password"
+      name="confirmPassword"
+      placeholder="12345Abcd!@#"
+      id="confirmPassword"
+      
+    />
+  </div>
+  <button
+    type="submit"
+    [disabled]="!userForm.valid"
+    type="submit"
+    class="btn-green bg-black-600 w-fit m-auto hover:text-black-600 hover:border-black-600 disabled:opacity-50"
+  >
+    ثبت نام
+  </button>
+</form>

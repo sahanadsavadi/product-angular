@@ -1,0 +1,21 @@
+<div
+dir="rtl"
+  class="rounded-lg p-15px flex flex-col items-center justify-between text-center  border border-grey-600 bg-white shadow-one xl:h-500 lg:h-550 md:h-450 sm-m:h-500 hover:shadow-2xl "
+>
+  <img src={{productCard.image}} alt={{productCard.title}} class="h-250 object-contain" />
+  <p class="text-p-lg-bold">{{productCard.title}}</p>
+  <p *ngIf="productCard.subtitle" class="text-p-md-bold text-black-400">{{productCard.subtitle}}</p>
+  <div class="flex flex-col">
+    <app-card-info-icon [productCard]="productCard" [cardInfoIconClassParent]="cardInfoIconClassParent"></app-card-info-icon>
+  </div>
+  <div class="flex items-center justify-center">
+    <button
+      (click)="addCheckout(productCard)" 
+      type="button"
+      class="btn-green justify-between"
+    >
+      <span class="text-p-md pl-2">افزودن به سبد خرید</span>
+      <span class="text-p-lg-bold">{{priceRial(productCard.price)}} تومان</span>
+    </button>
+  </div>
+</div>

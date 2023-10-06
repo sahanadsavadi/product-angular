@@ -1,0 +1,28 @@
+<header class="py-5px px-20px border-b border-grey-600">
+  <nav class="grid grid-cols-12 items-center">
+    <div class="col-span-4 md:grid sm-m:hidden">
+      <app-nav-items/>
+    </div>
+    <div class="md:col-span-4 md:m-auto sm-m:col-span-10">
+      <form dir="rtl" class="w-200">
+        <input
+          class="w-[inherit]"
+          placeholder="به دنبال چه هستید کالا خود را وارد کنید ..."
+        />
+      </form>
+    </div>
+    <div class="col-span-4 md:flex sm-m:hidden items-end justify-end">
+      <a
+        [routerLinkActive]="['nav-item-default-text']"
+        [routerLink]="['/']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="text-p-md"
+      >
+        خانه
+      </a>
+    </div>
+    <app-drawer
+      class="sm-m:col-span-2 md:hidden sm-m:grid sm-m:justify-end cursor-pointer"
+    />
+  </nav>
+</header>

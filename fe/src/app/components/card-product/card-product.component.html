@@ -1,0 +1,5 @@
+<ul class="grid 2xl:grid-cols-5 xl:grid-cols-3 lg:grid-cols-2 gap-15px">
+  <li *ngFor='let item of cardProducts'>
+    <app-card-product-detail [productCard]="item" />
+  </li>
+</ul> 

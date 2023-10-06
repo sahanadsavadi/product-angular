@@ -1,0 +1,46 @@
+<div class="{{ styleModeContainer }}" *ngIf="userService.userIsLogin">
+  <button (click)="userService.logout()" type="button" class={{styleModeText}}>
+    خروج
+  </button>
+  <a
+   [ngClass]="!myProduct.accessInCheckout ? 'opacity-50' : ''"
+   [routerLinkActive]="[styleModeTextActive]"
+   [routerLink]="['/checkout']"
+   class={{styleModeText}}
+  >
+    سبد خرید
+    <span class="text-green-500 text-p-sm-bold">{{
+      countCheckoutProduct
+    }}</span>
+  </a>
+  <p class="{{styleModeText}}">
+    {{ userService.fullName }}
+  </p>
+</div>
+<div class="{{ styleModeContainer }}" *ngIf="!userService.userIsLogin">
+  <a
+    [routerLinkActive]="[styleModeTextActive]"
+    [routerLink]="['/auth/register']"
+    class="{{styleModeText}}"
+  >
+    ثبت نام
+  </a>
+  <a
+    [routerLinkActive]="[styleModeTextActive]"
+    [routerLink]="['/auth/login']"
+    class="{{styleModeText}}"
+  >
+    ورود
+  </a>
+   <a
+   [ngClass]="!myProduct.accessInCheckout ? 'opacity-50' : ''"
+   [routerLinkActive]="[styleModeTextActive]"
+   [routerLink]="['/checkout']"
+   class={{styleModeText}}
+  >
+    سبد خرید
+    <span class="text-green-500 text-p-sm-bold">{{
+      countCheckoutProduct
+    }}</span>
+  </a>
+</div>

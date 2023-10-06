@@ -1,0 +1,25 @@
+<div  class="flex items-center gap-15px {{cardInfoIconClassParent}}">
+  <ul class="flex justify-center gap-15px">
+    <li class="lg:text-p-md sm-m:text-p-sm flex items-center gap-5px">
+      <p>فروشنده: {{productCard.seller}}</p>
+    </li>
+    <li class="lg:text-p-md sm-m:text-p-sm  flex items-center gap-5px">
+      <img src="/assets/location.svg" class="w-15 h-15 " />
+      <p>{{productCard.location}}</p>
+    </li>
+  </ul>
+  <ul class="flex justify-center gap-15px">
+    <li *ngIf="productCard.ability.paymentOnSpot" class="lg:text-p-md sm-m:text-p-sm  flex items-center gap-5px">
+      <img src="/assets/dollar.svg" class="w-15 h-15 " />
+      <p>پرداخت در محل</p>
+    </li>
+    <li *ngIf="productCard.ability.purchaseInPerson" class="lg:text-p-md sm-m:text-p-sm  flex items-center gap-5px">
+      <img src="/assets/person_buy.svg" class="w-15 h-15 " />
+      <p>خرید حضوری</p>
+    </li>
+    <li *ngIf="productCard.productLoadingType" class="lg:text-p-md sm-m:text-p-sm  flex items-center gap-5px">
+      <img src="/assets/more.svg" class="w-15 h-15 " />
+      <p>نوع بارگیری {{productCard.productLoadingType}}</p>
+    </li>
+  </ul>
+</div>
